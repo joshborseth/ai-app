@@ -35,9 +35,6 @@ importers:
       next:
         specifier: ^15.0.1
         version: 15.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      postgres:
-        specifier: ^3.4.4
-        version: 3.4.5
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -4142,7 +4139,8 @@ snapshots:
 
   postgres-range@1.1.4: {}
 
-  postgres@3.4.5: {}
+  postgres@3.4.5:
+    optional: true
 
   prelude-ls@1.2.1: {}
 
