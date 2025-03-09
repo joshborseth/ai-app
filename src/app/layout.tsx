@@ -10,13 +10,16 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const dmSans = DM_Sans({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={dmSans.className}>
+    <html lang="en" className={`${dmSans.variable} font-sans`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
