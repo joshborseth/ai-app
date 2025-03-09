@@ -6,6 +6,11 @@ export default {
     extend: {
       colors: {
         main: "var(--main)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+        quaternary: "var(--quaternary)",
+        quinary: "var(--quinary)",
+        senary: "var(--senary)",
         overlay: "var(--overlay)",
         bg: "var(--bg)",
         bw: "var(--bw)",

@@ -1,62 +1,44 @@
+import { Circle, Hexagon, Pentagon, Square, Triangle } from "lucide-react";
 import { Button } from "~/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card";
-import { Input } from "~/components/ui/input";
-import { Label } from "~/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "~/components/ui/select";
-import { HydrateClient } from "~/trpc/server";
 
-export default async function Home() {
+export default function Home() {
   return (
-    <HydrateClient>
-      <Card className="w-[350px]">
-        <CardHeader>
-          <CardTitle>Create project</CardTitle>
-          <CardDescription>
-            Deploy your new project in one-click.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form>
-            <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Name of your project" />
-              </div>
-              <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="framework">Framework</Label>
-                <Select>
-                  <SelectTrigger className="bg-bw text-text" id="framework">
-                    <SelectValue placeholder="Select" />
-                  </SelectTrigger>
-                  <SelectContent position="popper">
-                    <SelectItem value="next">Next.js</SelectItem>
-                    <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                    <SelectItem value="astro">Astro</SelectItem>
-                    <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-          </form>
-        </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button>Cancel</Button>
-          <Button variant="neutral">Deploy</Button>
-        </CardFooter>
-      </Card>
-    </HydrateClient>
+    <main className="bg-bg flex min-h-[100dvh] w-full flex-col items-center justify-center bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px]">
+      <div className="mx-auto max-w-full px-5 text-center">
+        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl">
+          Heading
+        </h1>
+        <p className="my-12 mt-8 text-lg font-normal leading-relaxed md:text-xl lg:text-2xl lg:leading-relaxed">
+          description
+        </p>
+        <Button>Get started</Button>
+
+        <Triangle
+          fill="var(--secondary)"
+          size={100}
+          className="absolute right-[25%] top-[65%] hidden md:block"
+        />
+        <Circle
+          fill="var(--tertiary)"
+          size={100}
+          className="absolute left-[75%] top-[30%] hidden md:block"
+        />
+        <Square
+          fill="var(--quaternary)"
+          size={100}
+          className="absolute left-[10%] top-[70%] hidden md:block"
+        />
+        <Hexagon
+          fill="var(--quinary)"
+          size={100}
+          className="absolute right-[40%] top-[15%] hidden md:block"
+        />
+        <Pentagon
+          fill="var(--senary)"
+          size={100}
+          className="absolute left-[20%] top-[15%] hidden md:block"
+        />
+      </div>
+    </main>
   );
 }
